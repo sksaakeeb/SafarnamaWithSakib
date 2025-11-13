@@ -2,29 +2,29 @@
 import { useState } from "react";
 import { motion } from "framer-motion";
 import Image from "next/image";
+import { FaYoutube } from "react-icons/fa";
 
 export default function VideosPage() {
   const videos = [
-  {
-    id: "swedSQR7Sr0",
-    title: "I Went to Sundarbans | World's LARGEST Mangrove Forest 🌳",
-    thumbnail: "/thumb-1.jpg",
-  },
+    {
+      id: "swedSQR7Sr0",
+      title: "I Went to Sundarbans | World's LARGEST Mangrove Forest 🌳",
+      // thumbnail: "/thumb-1.webp",
+    },
 
-  // ⭐ Your new Sundarbans vlog
-  {
-    id: "dgz-LxduKBk",
-    title: "My New Adventure VlogSundarbans Day 2 🌴",
-    thumbnail: "/videos/thumb-sundarban2.jpg",
-  },
-  {
-    id: "rBJTJEZr5wY&t",
-    title: "My New Adventure Vlog  Sundarbans Day 2 🌴",
-    thumbnail: "/videos/thumb-sundarban2.jpg",
-  },
+    // New vlogs here
+    {
+      id: "57372dZXVpQ",
+      title: "North Sikkim Trip (Offbeat & Sightseeing Spots) | Naga Falls & 7 Sisters Waterfall | EP01",
+      // thumbnail: "/thumb-2.webp",
+    },
 
-  
-];
+    {
+      id: "VzGR9LPFQ6Y",
+      title: "An Evening at MANDARMANI & New Digha Sea Beach! 🌅",
+      // thumbnail: "/thumb-3.webp",
+    },
+  ];
 
 
   const [activeVideo, setActiveVideo] = useState(videos[0]);
@@ -32,7 +32,7 @@ export default function VideosPage() {
   return (
     <section
       className="
-        min-h-screen py-24 px-6 sm:px-10 
+        min-h-screen py-32 px-6 sm:px-10 
         bg-gradient-to-br from-white via-blue-50 to-indigo-100
       "
     >
@@ -43,13 +43,13 @@ export default function VideosPage() {
         transition={{ duration: 0.8 }}
         className="text-4xl sm:text-5xl font-extrabold text-gray-900 text-center mb-14"
       >
-        Watch My  
+        Watch My
         <span className="bg-gradient-to-r from-blue-600 to-indigo-700 bg-clip-text text-transparent"> Videos</span>
       </motion.h2>
 
       {/* Main layout */}
       <div className="grid grid-cols-1 lg:grid-cols-3 gap-10 max-w-7xl mx-auto">
-        
+
         {/* === MAIN PLAYER === */}
         <motion.div
           key={activeVideo.id}
@@ -93,17 +93,12 @@ export default function VideosPage() {
                 className={`
                   flex items-center gap-4 cursor-pointer 
                   rounded-xl p-3 transition-all
-                  ${activeVideo.id === video.id ? "bg-white/60 scale-[1.02]" : "hover:bg-white/30"}
+                  ${activeVideo.id === video.id ? "bg-white/60 scale-[1.02]" : "hover:bg-white/80"}
                 `}
                 onClick={() => setActiveVideo(video)}
               >
-                <div className="relative w-24 h-16 rounded-lg overflow-hidden">
-                  <Image
-                    src={video.thumbnail}
-                    alt={video.title}
-                    fill
-                    className="object-cover"
-                  />
+                <div className="relative w-24 h-16 rounded-lg overflow-hidden flex justify-center items-center">
+                  <FaYoutube className="text-red-600 size-8" />
                 </div>
 
                 <p className="text-gray-800 text-sm font-medium">{video.title}</p>

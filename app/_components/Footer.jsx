@@ -44,7 +44,7 @@ export default function Footer() {
           <a href="/videos" className="hover:text-indigo-600 transition-colors">
             Videos
           </a>
-          <a href="#Contact Me" className="hover:text-indigo-600 transition-colors">
+          <a href="mailto:safarnamawithsakib@gmail.com" className="hover:text-indigo-600 transition-colors">
             Contact
           </a>
         </div>

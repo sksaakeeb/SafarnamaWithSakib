@@ -40,7 +40,7 @@ export default function Header() {
                                     <Link href="/" className="flex items-center gap-3" onClick={handleLinkClick}>
                                           <div className="h-10 w-10 rounded-xl overflow-hidden flex items-center justify-center">
                                                 <Image
-                                                      src="/logo_header.jpg"
+                                                      src="/logo.png"
                                                       alt="Safarnama With Sakib"
                                                       width={40}
                                                       height={40}
@@ -54,13 +54,13 @@ export default function Header() {
 
                                     {/* === Desktop Links === */}
                                     <div className="hidden md:flex items-center gap-6">
-                                          <a href="#" className="text-sm font-medium hover:underline">
+                                          <a href="/" className="text-sm font-medium hover:underline">
                                                 Home
                                           </a>
                                           <Link href="/videos" className="text-sm font-medium hover:underline">
                                                 Videos
                                           </Link>
-                                          <a href="#AboutMe" className="text-sm font-medium hover:underline">
+                                          <a href="/#AboutMe" className="text-sm font-medium hover:underline">
                                                 About Me
                                           </a>
                                           <a href="mailto:safarnamawithsakib@gmail.com" className="text-sm font-medium hover:underline">

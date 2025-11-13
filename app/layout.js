@@ -1,5 +1,7 @@
 import { Doto, Montserrat } from "next/font/google";
 import "./globals.css";
+import Header from "./_components/Header";
+import Footer from "./_components/Footer";
 
 const doto = Doto({
   variable: "--font-geist-sans",
@@ -25,7 +27,11 @@ export default function RootLayout({ children }) {
       lang="en"
       className={`${doto.variable} ${montserrat.className}`}
     >
-      <body>{children}</body>
+      <body>
+        <Header />
+        {children}
+        <Footer />
+      </body>
     </html>
   );
 }

@@ -10,9 +10,9 @@ import "swiper/css/pagination";
 function Hero() {
   const images = [
     "/photo-1.jpg",
-    "/photo-2.jpg",
+    "/my-photo.jpg",
     "/photo-3.jpg",
-    "/photo-4.jpg",
+    // "/photo-4.jpg",
     "/photo-5.jpg",
   ];
 
@@ -97,7 +97,7 @@ function Hero() {
                 slidesPerView={1}
                 loop={true}
                 autoplay={{
-                  delay: 3500,
+                  delay: 2000,
                   disableOnInteraction: false,
                 }}
                 speed={1000}
