@@ -54,18 +54,23 @@ export default function Header() {
 
                                     {/* === Desktop Links === */}
                                     <div className="hidden md:flex items-center gap-6">
-                                          <a href="/" className="text-sm font-medium hover:underline">
+                                          <Link href="/" className="text-sm font-medium hover:underline">
                                                 Home
-                                          </a>
+                                          </Link>
                                           <Link href="/videos" className="text-sm font-medium hover:underline">
                                                 Videos
                                           </Link>
-                                          <a href="/#AboutMe" className="text-sm font-medium hover:underline">
+
+                                          <Link href="/#AboutMe" className="text-sm font-medium hover:underline">
                                                 About Me
-                                          </a>
-                                          <a href="mailto:safarnamawithsakib@gmail.com" className="text-sm font-medium hover:underline">
+                                          </Link>
+
+                                          <Link href="/#MyMission" className="text-sm font-medium hover:underline">
+                                                My Mission
+                                          </Link>
+                                          <Link href="mailto:safarnamawithsakib@gmail.com" className="text-sm font-medium hover:underline">
                                                 Contact Me
-                                          </a>
+                                          </Link>
                                           <Link href="https://www.youtube.com/@SafarnamaWithSakib" target="_blank">
                                                 <button className="ml-2 rounded-lg px-3 py-1 text-sm font-semibold ring-1 ring-white/20 backdrop-blur-sm text-red-600 hover:scale-110 transition-all cursor-pointer">
                                                       Subscribe
@@ -109,18 +114,23 @@ export default function Header() {
                                                 transition={{ duration: 0.3, ease: "easeOut" }}
                                                 className="mt-3 flex flex-col gap-2 rounded-lg border-t border-white/10 pt-3 md:hidden"
                                           >
-                                                <a href="#" onClick={handleLinkClick} className="px-2 py-2 text-sm font-medium">
+                                                <Link href="/" onClick={handleLinkClick} className="px-2 py-2 text-sm font-medium">
                                                       Home
-                                                </a>
+                                                </Link>
                                                 <Link href="/videos" onClick={handleLinkClick} className="px-2 py-2 text-sm font-medium">
                                                       Videos
                                                 </Link>
-                                                <a href="#AboutMe" onClick={handleLinkClick} className="px-2 py-2 text-sm font-medium">
+
+                                                <Link href="/#AboutMe" onClick={handleLinkClick} className="px-2 py-2 text-sm font-medium">
                                                       About Me
-                                                </a>
-                                                <a href="mailto:safarnamawithsakib@gmail.com" onClick={handleLinkClick} className="px-2 py-2 text-sm font-medium">
+                                                </Link>
+                                                <Link href="/#MyMission" onClick={handleLinkClick} className="px-2 py-2 text-sm font-medium">
+                                                      My Mission
+                                                </Link>
+
+                                                <Link href="mailto:safarnamawithsakib@gmail.com" onClick={handleLinkClick} className="px-2 py-2 text-sm font-medium">
                                                       Contact Me
-                                                </a>
+                                                </Link>
                                                 <Link href="https://www.youtube.com/@SafarnamaWithSakib" target="_blank" onClick={handleLinkClick}>
                                                       <button className="mt-1 rounded-lg px-3 py-2 text-sm font-semibold ring-1 ring-white/20 text-red-600">
                                                             Subscribe

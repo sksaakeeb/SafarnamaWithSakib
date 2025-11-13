@@ -86,25 +86,34 @@ export default function VideosPage() {
         >
           <h3 className="text-xl font-semibold text-gray-800 mb-4">Playlist</h3>
 
-          <div className="space-y-5">
-            {videos.map((video) => (
-              <div
-                key={video.id}
-                className={`
-                  flex items-center gap-4 cursor-pointer 
-                  rounded-xl p-3 transition-all
-                  ${activeVideo.id === video.id ? "bg-white/60 scale-[1.02]" : "hover:bg-white/80"}
-                `}
-                onClick={() => setActiveVideo(video)}
-              >
-                <div className="relative w-24 h-16 rounded-lg overflow-hidden flex justify-center items-center">
-                  <FaYoutube className="text-red-600 size-8" />
-                </div>
+          <div className="space-y-3">
+            {videos.map((video) => {
+              const isActive = activeVideo.id === video.id;
 
-                <p className="text-gray-800 text-sm font-medium">{video.title}</p>
-              </div>
-            ))}
+              return (
+                <div
+                  key={video.id}
+                  onClick={() => setActiveVideo(video)}
+                  className={`
+          flex items-center gap-4 cursor-pointer rounded-xl px-3 py-2 transition-all
+          h-16
+          ${isActive ? "bg-white/70 scale-[1.02] shadow-sm" : "hover:bg-white/80"}
+        `}
+                >
+                  {/* FIXED ICON POSITION */}
+                  <div className="w-12 h-12 flex items-center justify-center rounded-lg">
+                    <FaYoutube className="text-red-600 size-7" />
+                  </div>
+
+                  {/* FIXED HEIGHT TEXT → NO SHIFT */}
+                  <p className="text-gray-800 text-sm font-medium line-clamp-1">
+                    {video.title}
+                  </p>
+                </div>
+              );
+            })}
           </div>
+
         </motion.div>
 
       </div>
